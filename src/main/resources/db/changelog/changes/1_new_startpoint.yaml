@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1656695252564-1
+      author: vitalii (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: booksPK
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: bookName
+                  type: VARCHAR(50)
+              - column:
+                  name: bookPrice
+                  type: DOUBLE(4, 2)
+            tableName: books
+

@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: renameColumn
+      author: liquibase-docs
+      changes:
+        - renameColumn:
+            catalogName: library
+            columnDataType: VARCHAR(50)
+            newColumnName: books
+            oldColumnName: bookName
+            schemaName: public
+            tableName: books
+

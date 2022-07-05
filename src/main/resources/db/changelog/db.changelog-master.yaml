@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      - file: classpath:db/changelog/changes/1_new_startpoint.yaml
+  - include:
+      - file: classpath:db/changelog/changes/1_rename_column.yaml
