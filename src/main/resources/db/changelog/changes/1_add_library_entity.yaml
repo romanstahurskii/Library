@@ -1,0 +1,61 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1657015611785-1
+      author: vitalii (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: libraryPK
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: libraryName
+                  type: VARCHAR(255)
+            tableName: library
+  - changeSet:
+      id: 1657015611785-3
+      author: vitalii (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: bookIdentifier
+                  type: varchar(255)
+            tableName: books
+  - changeSet:
+      id: 1657015611785-4
+      author: vitalii (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: library_id
+                  type: bigint
+            tableName: books
+  - changeSet:
+      id: 1657015611785-5
+      author: vitalii (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: bookIdentifier
+            constraintName: UC_BOOKSBOOKIDENTIFIER_COL
+            tableName: books
+  - changeSet:
+      id: 1657015611785-6
+      author: vitalii (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: library_id
+            baseTableName: books
+            constraintName: FKfkcx214q5f7hskpralxjyyn3q
+            deferrable: false
+            initiallyDeferred: false
+            referencedColumnNames: id
+            referencedTableName: library
+            validate: true
+

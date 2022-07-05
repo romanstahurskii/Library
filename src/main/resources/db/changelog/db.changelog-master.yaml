@@ -3,3 +3,5 @@ databaseChangeLog:
       - file: classpath:db/changelog/changes/1_new_startpoint.yaml
   - include:
       - file: classpath:db/changelog/changes/1_rename_column.yaml
+  - include:
+      - file: classpath:db/changelog/changes/1_add_library_entity.yaml
